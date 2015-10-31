@@ -9,11 +9,8 @@ int barThree = 4;
 int barFour = 5;
 int barFive = 6;
 int barSix = 7;
-int barSevenR = 8;
-int barSevenG = 9;
-int barEight = 10;
-
-int barSeven = 0;
+int barSeven = 8;
+int barEight = 9;
  
 void setup() 
 {
@@ -23,8 +20,7 @@ void setup()
   pinMode(barFour, OUTPUT);
   pinMode(barFive, OUTPUT);
   pinMode(barSix, OUTPUT);
-  pinMode(barSevenR, OUTPUT);
-  pinMode(barSevenG, OUTPUT);
+  pinMode(barSeven, OUTPUT);
   pinMode(barEight, OUTPUT);
 }
  
@@ -60,21 +56,9 @@ void loop()
   for (int i = 1; i <= maxScale; i++)
   {
     if (i >= displayPeak) { // sample is too low to be shown in this bar, so write it LOW
-       if (i == 7){
-        digitalWrite(8, LOW);
-       } else if (i == 8) {
-        digitalWrite(10, LOW);
-       } else {
-        digitalWrite(i + 1, LOW);
-       }
+      digitalWrite(i + 1, LOW);
     } else { // sample is in the range of this bar, so light it
-      if (i == 7){
-        digitalWrite(8, HIGH);
-      } else if (i == 8) {
-        digitalWrite(10, HIGH);
-      } else {
-        digitalWrite(i + 1, HIGH);
-      }
+      digitalWrite(i + 1, HIGH);
     }
   }
 }
