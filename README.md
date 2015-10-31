@@ -1,3 +1,5 @@
 ### vu-meter ###
 
-Because that's what it is.
+I got a little carried away with my Mission:Impossible halloween endeavours.
+
+Adapted from: https://learn.adafruit.com/adafruit-microphone-amplifier-breakout/measuring-sound-levels
